@@ -107,7 +107,26 @@ const getLetterAtIndex = (str, index) => {
 
 // Exercise 6 ******************************************************************************************************************************
 
+// Write an arrow function accepts an array of values and returns a new array of stringified values.
+const convertToString = (arr) => {
+  const stringifiedValues = arr.map((element) => {
+    return element.toString();
+  });
+  return stringifiedValues;
+};
+
 // Exercise 7 ******************************************************************************************************************************
+
+// Write an arrow function accepts an array of objects as well as an object and returns
+// a new array of objects with the object added to each element of the array.
+//
+// e.g. insert([{ name: "Bob" }, { name: "Josie" }], {"isAvailable": false});
+// returns:
+// [
+//   { name: "Bob", isAvailable: false },
+//   { name: "Josie", isAvailable: false },
+// ];
+const insert = (arr, obj) => {};
 
 // Exercise 8 ******************************************************************************************************************************
 
