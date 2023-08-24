@@ -126,8 +126,90 @@ const convertToString = (arr) => {
 //   { name: "Bob", isAvailable: false },
 //   { name: "Josie", isAvailable: false },
 // ];
-const insert = (arr, obj) => {};
+// - If the second parameter is not an object, return the original array.
+const insert = (arr, obj) => {
+  if (typeof obj !== "objet") {
+    return arr;
+  } else {
+    const addedObjToArray = arr.map((object) => {
+      return { ...object, ...obj };
+    });
+    return addedObjToArray;
+  }
+};
 
 // Exercise 8 ******************************************************************************************************************************
 
+// Write an arrow function accepts an indeterminate amount of numbers as arguments and returns the sum of the squares of all the numbers.
+//
+// - If any element is not a number, skip it.
+// - If no arguments are passed, return `undefined`
+const addNumbers = (...nums) => {
+  let sum = 0;
+
+  if (typeof nums == "") {
+    return undefined;
+  }
+
+  const filteredArgs = nums.filter((number) => {
+    return typeof number === "number";
+  });
+
+  filteredArgs.forEach((num) => {
+    sum += num * num;
+  });
+
+  return sum;
+};
+
 // Exercise 9 ******************************************************************************************************************************
+
+// Write an arrow function accepts two arrays and returns a new array with the elements that are unique to array1
+// and array2.
+// An element is unique if it only appears in one of the arrays.
+// It is allowed to appear multiple times in the same array.
+//
+// - If there are no unique elements return an empty array.
+// - If the inputs are anything other than arrays, return undefined.
+
+// For example:
+// uniqueElements([0,1,2,3], [1,3,4,5]); // [0,2,4,5]
+// uniqueElements([1,2,3], [3,2,1]); // []
+// uniqueElements(2); // undefined, not an array
+
+// HINTS:
+//   - You'll need to do a nested iteration, to compare every item in array 1
+//     to every item in array 2
+//   - You will need to run your logic 2 times, flipping the order:
+//     - Once to get the unique elements in the first array
+//     - A second time to get the unique elements in the second array
+//
+// THIS IS A VERY HARD PROBLEM.
+// If you struggle with it, set it aside. In a few weeks, you might find the
+// solution comes more quickly :)
+const uniqueElements = (arr1, arr2) => {
+  let nonUniqueValues = [];
+  let uniqueValues = [];
+
+  arr1.forEach((element1) => {
+    arr2.forEach((element2) => {
+      if (element1 === element2) {
+        nonUniqueValues.push(element1);
+      }
+    });
+  });
+
+  arr1.forEach((number) => {
+    if (nonUniqueValues.includes(number) !== true) {
+      uniqueValues.push(number);
+    }
+  });
+
+  arr2.forEach((number) => {
+    if (nonUniqueValues.includes(number) !== true) {
+      uniqueValues.push(number);
+    }
+  });
+
+  return uniqueValues;
+};

@@ -1,0 +1,237 @@
+/* Exercise 1 *************************************************************************************************************************************************** */
+button {
+  /* Styles here */
+}
+
+/* Exercise 2 *************************************************************************************************************************************************** */
+p {
+}
+
+.one {
+}
+
+.two {
+}
+
+.three {
+}
+
+/* Exercise 3 *************************************************************************************************************************************************** */
+/* ...crickets... */
+
+/* Exercise 4 *************************************************************************************************************************************************** */
+#centered {
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+subtitle {
+  font-size: 1.5rem;
+}
+
+.div {
+  background-color: gray;
+}
+
+#li {
+  list-style-type: none;
+}
+
+#content {
+  text-decoration: underline;
+  background: grey;
+}
+
+monospaced {
+  font-family: monospace;
+}
+
+h1,
+p,
+h2 {
+  background: grey;
+  margin: 0;
+}
+
+/* Exercise 5 *************************************************************************************************************************************************** */
+/* minor CSS reset */
+/* You should not need to change anything here */
+html,
+body,
+div,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Corrupted CSS below */
+
+/* ------------------- */
+
+/* b*** {
+  bac******d: #eaeaee;
+  ****-**mily: "Yanone Kaffeesatz", sans-serif;
+  ***t-si*e: 24px;
+  max-*****: 600px;
+  margin: 0 * * *;
+  padding: 32px * *;
+}
+
+h1,
+h2 {
+  $#%$#^#$%#$%: "Bangers", cursive;
+}
+
+#h2 {
+  text-decoration: underline;
+}
+
+.centered {
+  text*****n: centre;
+}
+
+.title {
+  ***t-size: 48px;
+}
+
+.content {
+  ......................;
+  ...........: 5px;
+  ............: 48px;
+  ........: 20px;
+}
+
+.content ul {
+  margin-top: .....;
+  padding-left: .....;
+}
+
+.element {
+  list-*****-type: square;
+}
+
+.first {
+  color: #ffffff;
+}
+
+.second {
+  font-weight: cold;
+} */
+
+/* Exercise 6 *************************************************************************************************************************************************** */
+/* minor CSS reset */
+/* You should not need to change anything here */
+html,
+body,
+div,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* ADD CSS BELOW */
+
+body {
+}
+
+h1,
+h2 {
+}
+
+h1 {
+}
+
+h2 {
+}
+
+.row {
+}
+
+.col {
+}
+
+.image {
+}
+
+/* Exercise 7 *************************************************************************************************************************************************** */
+/* minor CSS reset */
+/* You should not need to change anything here */
+html,
+body,
+div,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* ADD CSS BELOW */
+
+/* Exercise 8 *************************************************************************************************************************************************** */
+img {
+  max-width: 300px;
+}
+
+.img1 {
+}
+
+.img2 {
+}
+
+.img3 {
+}
+
+.img4 {
+}
+
+/* Exercise 9 *************************************************************************************************************************************************** */
+img {
+  max-width: 300px;
+}
+
+.img1 {
+}
+
+.img2 {
+}
+
+.img3 {
+}
+
+.img4 {
+}
+
+/* Exercise 10 *************************************************************************************************************************************************** */
+body {
+  padding: 40px;
+}
+
+button {
+  /* Solve me */
+}
