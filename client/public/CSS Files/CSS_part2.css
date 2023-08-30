@@ -45,7 +45,7 @@ body {
 
 /* Exercise 2 ************************************* */
 
-body {
+/* body {
   margin: 0;
   padding: 0;
   height: 100px;
@@ -68,4 +68,18 @@ a {
 a:hover {
   opacity: 50%;
   transition: all 0.15s ease;
+} */
+
+/* Exercise 3 ************************************* */
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/client/assets/CSS\ P2\ -\ Pictures/ex-3-goal.png);
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
 }
