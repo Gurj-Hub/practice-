@@ -1,0 +1,71 @@
+/* Exercise 1 ************************************* */
+/* 
+body {
+  margin: 0;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  height: 50px;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(58, 46, 46);
+  color: aliceblue;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.footer {
+  height: 50px;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(58, 46, 46);
+  color: aliceblue;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+} */
+
+/* Exercise 2 ************************************* */
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  background-color: #3a3633;
+}
+.container {
+  width: 50vw;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid white;
+}
+
+a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 50%;
+  transition: all 0.15s ease;
+}

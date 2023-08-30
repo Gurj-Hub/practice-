@@ -376,8 +376,6 @@ function exercise11() {
   console.log(array);
 }
 
-// "Exercise 12";******************************************************************************************************************************
-
 // The Fibonacci sequence is a sequence of numbers where every value is the sum
 // of the previous 2 values.
 // It looks like this:
