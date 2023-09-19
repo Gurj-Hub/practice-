@@ -56,3 +56,36 @@ console.log(arr6);
 //consoles out [69,69,69,69]
 
 //7. filter()  : creates a new array with elements that pass condition (function) ////////////////////////////////////////////////////////////////////////////
+const arr7 = [1, 2, 3, 4, 5, 6, 7];
+
+const filtered = arr7.filter((element) => element > 1);
+
+console.log(filtered);
+// consoles out [2,3,4,5,6,7]
+
+//8. find()  : returns the first element in an array that satisfies a condition (function) - if none satisfy, returns undefined///////////////////////////////
+const arr8 = [1, 2, 3, 4, 5, 6, 7, 8];
+
+const found = arr8.find((element) => element > 1);
+console.log(found);
+// consoles 2
+
+//9. findIndex()  : returns index of first element that satisfies a condition (testing function) - if none satisfy, returns undefined ///////////////////////
+const arr9 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const indexFound = arr9.findIndex((element) => {
+  return element > 5;
+});
+
+console.log(indexFound);
+// consoles out 5
+
+//10. findLast()  : returns the first element (from reverse) in an array that satisfies a condition (function) - if none satisfy, returns undefined/////////
+const arr10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const foundLast = arr10.findLast((element) => {
+  return element > 8;
+});
+
+console.log(foundLast);
+// consoles out 10
