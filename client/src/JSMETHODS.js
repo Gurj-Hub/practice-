@@ -89,3 +89,33 @@ const foundLast = arr10.findLast((element) => {
 
 console.log(foundLast);
 // consoles out 10
+
+//11. findLastIndex()  : iterates array in reverse, finds index of first element that satisfies testing function - if none satisfy, returns -1 /////////////
+const arr11 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const foundLastIndex = arr11.findLastIndex((element) => element < 6);
+
+console.log(foundLastIndex);
+//console out 4
+
+//12. flat()  : creates new array with all nested arrays concatenated recursively up (removes the 1st nested arrays brackets)///////////////////////////////
+const arr12 = [1, [2, [3]]];
+
+const flattenedArray = arr12.flat();
+
+console.log(flattenedArray);
+//consoles out [1,2,[3]]
+
+//13. forEach()  : executes a provided function for each element of the array
+const arr13 = [1, 2, 3, 4, 5, 6, 7];
+
+arr13.forEach((element) => console.log(`Number: ${element}`));
+//consoles out "Number: (every value within the array once each)"
+
+//14. from()  : creates a new copied array from an iterable object or array-like object ///////////////////////////////////////////////////////////////////
+const arr14 = Array.from("Fuck you");
+
+console.log(arr14);
+// consoles out ["F", "u", "c", "k", " ", "y", "o", "u"]
+
+//15. fromAsync()  : *************************************************************************************************************************
