@@ -119,3 +119,134 @@ console.log(arr14);
 // consoles out ["F", "u", "c", "k", " ", "y", "o", "u"]
 
 //15. fromAsync()  : *************************************************************************************************************************
+
+//************************************************************************************************************************************
+//************************************************************************************************************************************
+//************************************************************************************************************************************
+// OTHER PRACTICE FROM LEETCODE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+const findTheDifference = (s, t) => {
+  const difference = [];
+  const arrS = s.split("");
+  const arrT = t.split("");
+
+  arrT.forEach((element) => {
+    const foundLetter = arrS.find((letter) => letter === element);
+
+    if (foundLetter === undefined) {
+      difference.push(element);
+    }
+  });
+  const stringifiedDifference = difference.toString();
+
+  return stringifiedDifference;
+};
+// findTheDifference("abcd","adkgibna");
+
+// ************************************************************************
+//created an array method that can be used on arrays to return last index value
+
+Array.prototype.last = function () {
+  if (this.length > 0) {
+    return this[this.length - 1];
+  } else {
+    return undefined;
+  }
+};
+
+// const array = [1,2,3,4,{"a":25}];
+
+// console.log(array.last());
+
+// ************************************************************************
+//function increments per call with closure functionality
+
+var createCounter = function (n) {
+  let counter = 0;
+  let sum = 0;
+
+  return function () {
+    sum = n + counter;
+    counter++;
+    console.log(sum);
+    return sum;
+  };
+};
+
+// const counter = createCounter(10);
+
+// ************************************************************************
+//executes an event after a certain time with setTimeout
+async function sleep(millis) {
+  return new Promise((resolve) => setTimeout(resolve, millis));
+}
+
+// ************************************************************************
+//array reduce function - 2 examples
+var reduce = function (nums, fn, init) {
+  for (let i = 0; i < nums.length; i++) {
+    init = fn(init, nums[i]);
+  }
+  console.log(init);
+  return init;
+};
+
+reduce(
+  [1, 2, 3, 4],
+  function sum(accum, curr) {
+    return accum + curr * curr;
+  },
+  100
+);
+const nums = [1, 2, 3, 4, 5];
+const fn = (a, b) => {
+  return a + b;
+};
+
+// const reducerFxn = nums.reduce(fn, 100);
+
+// console.log(reducerFxn);
+
+// ************************************************************************
+//composite function writing - USING REDUCERIGHT ARRAY METHOD
+const compose = (functions) => {
+  if (functions.length === 0) {
+    return (x) => x;
+  }
+  //apply reduceRight method to array functions param(an array)
+  return functions.reduceRight(function (prev, next) {
+    //return of the reduceRight method to functions array like reduce method
+    //give argument x(input) to prev fxn and apply next fxn to prev one
+    return (x) => {
+      return next(prev(x));
+    };
+  });
+};
+// ************************************************************************
+// filtering array WITHOUT FILTER method
+const filter = (arr, fn) => {
+  let filteredArr = [];
+
+  //using forEach to loop through all elements of arr (need index in-case fxn operates on indexes)
+  arr.forEach((element, index) => {
+    //if values passed to fxn evaluate to TRUE
+    if (fn(element, index)) {
+      filteredArr.push(element);
+    }
+  });
+
+  return filteredArr;
+};
+
+// ************************************************************************
+// mapping array WITHOUT MAP method
+const mappingArr = (arr, fn) => {
+  let transformedArr = [];
+
+  //using forEach to loop through all elements of arr
+  arr.forEach((element, index) => {
+    //setting transformed arrays values to the modified arr values
+    transformedArr[index] = fn(element, index);
+  });
+
+  return transformedArr;
+};
