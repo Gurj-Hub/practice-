@@ -250,3 +250,95 @@ const mappingArr = (arr, fn) => {
 
   return transformedArr;
 };
+
+// ************************************************************************
+// GENERATOR Function for FIB Sequence
+
+const fibGenerator = function* () {
+  let current = 0;
+  let next = 1;
+  let placeholder;
+
+  while (true) {
+    yield current;
+    console.log(current);
+    placeholder = current;
+    current = next;
+    next += placeholder;
+  }
+};
+
+const gen = fibGenerator();
+gen.next().value; // 0
+gen.next().value; // 1
+gen.next().value;
+gen.next().value;
+gen.next().value;
+
+// ************************************************************************
+// counter with INCREMENT/DECREMENT/RESET functions
+
+const createCounter = (init) => {
+  let currentValue = init;
+
+  return {
+    increment: () => {
+      ++currentValue;
+      console.log(currentValue);
+    },
+    decrement: () => {
+      --currentValue;
+      console.log(currentValue);
+    },
+    reset: () => {
+      currentValue = init;
+      console.log(currentValue);
+      return init;
+    },
+  };
+};
+
+const counter = createCounter(5);
+counter.increment(); // 6
+counter.reset(); // 5
+counter.decrement(); // 4
+const createCounter = (init) => {
+  let currentValue = init;
+
+  return {
+    increment: () => {
+      ++currentValue;
+    },
+    decrement: () => {
+      --currentValue;
+    },
+    reset: () => {
+      currentValue = init;
+      return init;
+    },
+  };
+};
+
+// ************************************************************************
+// EXTRACTING SPECIFIC AMOUNTS OF ARRAY + REMAINDER
+
+const chunk = (arr, size) => {
+  let outputArray = [];
+  const nberOfRotations = Math.floor(arr.length / size);
+
+  if (arr.length === 0) {
+    return arr;
+  }
+  if (arr.length > size) {
+    for (let i = 0; i < nberOfRotations; i++) {
+      const spliced = arr.splice(0, size);
+      outputArray.push(spliced);
+    }
+  }
+  if (arr.length <= size && arr.length !== 0) {
+    outputArray.push(arr);
+  }
+  return outputArray;
+};
+
+// chunk([1,9,6,3,2],3);
