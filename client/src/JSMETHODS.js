@@ -342,3 +342,119 @@ const chunk = (arr, size) => {
 };
 
 // chunk([1,9,6,3,2],3);
+
+// ************************************************************************
+// 1. Write a function accepts an array of objects and returns
+// the average age of the `people` in that array (rounded to the nearest unit.)
+
+// const people = [
+//     { name: { first: "Alyssa", middle: "P.", last: "Hacker" }, age: 26 },
+//     { name: { first: "Ben", last: "Bitdiddle" }, age: 34 },
+//     { name: { first: "Eva", middle: "Lu", last: "Ator" }, age: 40 },
+//     { name: { first: "Lem", middle: "E.", last: "Tweakit" }, age: 45 },
+//     { name: { first: "Louis", last: "Reasoner" }, age: 21 },
+//     { name: { first: "Shahan", middle: "Haig", last: "Krakirian" }, age: 21 },
+//   ];
+
+const avgAge = (peopleArr) => {
+  let sum = 0;
+  let average = 0;
+
+  peopleArr.forEach((person, index) => {
+    sum += person.age;
+    average = sum / (index + 1);
+  });
+  console.log(Math.round(average));
+  return Math.round(average);
+};
+
+// ************************************************************************
+// 1. Write a function that, when passed an array of *people* (person objects) as
+// an argument and returns an array of their full names (each full name is a string).
+
+const fullName = (peopleArr) => {
+  let nameArr = [];
+
+  peopleArr.forEach((person) => {
+    if (person.name.middle === null) {
+      nameArr.push(person.name.first + " " + person.name.last);
+    } else {
+      nameArr.push(
+        person.name.first + " " + person.name.middle + " " + person.name.last
+      );
+    }
+  });
+  console.log(nameArr);
+  return nameArr;
+};
+
+// ************************************************************************
+// 1. Write a function that, when given *people* and an *age* as arguments,
+// returns an array of just the people that are older than the specified age.
+
+const olderPeople = (peopleArr, age) => {
+  const filteredAge = peopleArr.filter((person) => {
+    return person.age > age;
+  });
+  console.log(filteredAge);
+  return filteredAge;
+};
+
+// ************************************************************************
+// 1. Write a function that accepts the object below, a key and a value and returns the objects that contain the same key/value pair
+// e.g. getData(staffMembers, 'title', 'Web Developer II') returns
+const staffMembers = [
+  {
+    name: "Jane Smith",
+    title: "Web Developer II",
+    skillLevels: {
+      javascript: 7,
+      python: 4,
+      sql: 6,
+    },
+  },
+  {
+    name: "Frank Castle",
+    title: "Web Developer I",
+    skillLevels: {
+      javascript: 4,
+      python: 4,
+      sql: 3,
+    },
+  },
+  {
+    name: "Steve Rogers",
+    title: "Database Admin",
+    skillLevels: {
+      javascript: 7,
+      python: 4,
+      sql: 9,
+    },
+  },
+  {
+    name: "Chuck Taylor",
+    title: "Web Developer III",
+    skillLevels: {
+      javascript: 8,
+      python: 7,
+      sql: 8,
+    },
+  },
+  {
+    name: "Thor Odinson",
+    title: "Web Intern",
+    skillLevels: {
+      javascript: 4,
+      python: 3,
+      sql: 6,
+    },
+  },
+];
+
+const getData = (arr, key, val) => {
+  const filteredArr = arr.filter((member) => {
+    return member.key === val;
+  });
+
+  return filteredArr;
+};
